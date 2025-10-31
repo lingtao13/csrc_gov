@@ -1,0 +1,50 @@
+# 日志文件路径
+log_path: ./log/csrc_gov_detail/
+# 日志文件名
+log_file_path: log.log
+# 模板文件路径
+temp_path: ./temp/
+# 模板文件名
+temp_file_path:
+  h5: page.html
+  c3: style.css
+# obs服务器
+obs_server:
+  ak: FMH0XV3F9VFQLTAFHRGL
+  sk: ARUbor7b03LBEjBVotieP4Y2m34KtXYLklvz86ZO
+  sv: obs.cn-south-1.myhuaweicloud.com
+  bt: obs-cninfo-test
+  fd: cwd_test/csrc_gov/
+# 数据库服务器
+db_server:
+  db_host: 127.0.0.1
+  db_port: 3306
+  db_username: root
+  db_password: chenweida
+  db_database: pymysql_test
+  ssh_host:
+  ssh_username:
+  ssh_password:
+db_ssh_server:
+  db_host: 127.0.0.1
+  db_port: 3306
+  db_username: root
+  db_password: BigData@2023
+  db_database: pyspider_data
+  ssh_host: 139.159.191.74
+  ssh_username: root
+  ssh_password: BigData@2023
+# 数据库数据表
+db_table: csrc_gov
+# 更新范围 以天为单位
+update_time_extent: 100
+# 是否使用代理 0：不使用 1：使用
+is_use_proxy: 0
+# 代理单次获取重试最大次数
+get_proxy_retry_number: 2
+# 代理缓存路径
+proxy_cache_path: ./cache/proxy_cache/csrc_gov_detail.txt
+# 文件缓存路径
+file_cache_path: ./cache/file_cache/detail_cache/
+# 网站地址
+website_base_url: http://www.csrc.gov.cn/

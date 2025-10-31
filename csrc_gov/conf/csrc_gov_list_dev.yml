@@ -1,0 +1,516 @@
+# 日志文件路径
+log_path: ./log/csrc_gov_list/
+# 日志文件名
+log_file_path: log.log
+# 数据库服务器
+db_server:
+  db_host: 127.0.0.1
+  db_port: 3306
+  db_username: root
+  db_password: chenweida
+  db_database: pymysql_test
+  ssh_host:
+  ssh_username:
+  ssh_password:
+db_ssh_server:
+  db_host: 127.0.0.1
+  db_port: 3306
+  db_username: root
+  db_password: BigData@2023
+  db_database: pyspider_data
+  ssh_host: 139.159.191.74
+  ssh_username: root
+  ssh_password: BigData@2023
+# 数据库服务器
+monitor_db_server:
+  db_host: 127.0.0.1
+  db_port: 3306
+  db_username: root
+  db_password: chenweida
+  db_database: pymysql_test
+  ssh_host:
+  ssh_username:
+  ssh_password:
+monitor_db_ssh_server:
+  db_host: 127.0.0.1
+  db_port: 3306
+  db_username: root
+  db_password: BigData@2023
+  db_database: pyspider_data
+  ssh_host: 139.159.191.74
+  ssh_username: root
+  ssh_password: BigData@2023
+# 数据库数据表
+db_table: csrc_gov
+# 数据库监控数据表
+db_monitor_table: crawler_status
+# 是否全量爬取
+is_full_crawled: 1
+# 更新范围 以天为单位
+update_time_extent: 10
+# 是否使用代理 0：不使用 1：使用
+is_use_proxy: 0
+# 代理单次获取重试最大次数
+get_proxy_retry_number: 3
+# 代理缓存路径
+proxy_cache_path: ./cache/proxy_cache/csrc_gov_list.txt
+# 原稿url
+manuscript_data_base_url: http://www.csrc.gov.cn/getManuscriptData
+# 辖区列表
+precinct_list:
+  - precinct: 北京辖区
+    precinct_code: ZJJ001
+    list_page_base_url: http://www.csrc.gov.cn/searchList/64c5d2c9a3de4eaca355e9170188e06a
+    crawler_status_id: 70
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 北京辖区
+      blockLink: http://www.csrc.gov.cn/beijing/c103543/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 天津辖区
+    precinct_code: ZJJ002
+    list_page_base_url: http://www.csrc.gov.cn/searchList/ba03511cbacb4f53affdd31cfe555246
+    crawler_status_id: 71
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 天津辖区
+      blockLink: http://www.csrc.gov.cn/tianjin/c103581/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 河北辖区
+    precinct_code: ZJJ003
+    list_page_base_url: http://www.csrc.gov.cn/searchList/f51c01e5ac204759a7afc1b44be5b885
+    crawler_status_id: 72
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 河北辖区
+      blockLink: http://www.csrc.gov.cn/hebei/c103619/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 山西辖区
+    precinct_code: ZJJ004
+    list_page_base_url: http://www.csrc.gov.cn/searchList/7dc757c3164d41de9fa0f1aebbb5ad4e
+    crawler_status_id: 73
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 山西辖区
+      blockLink: http://www.csrc.gov.cn/shanxi/c103657/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 内蒙古辖区
+    precinct_code: ZJJ005
+    list_page_base_url: http://www.csrc.gov.cn/searchList/ccf0cec142b34c01be92183b9e6abc01
+    crawler_status_id: 74
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 内蒙古辖区
+      blockLink: http://www.csrc.gov.cn/neimenggu/c103695/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 辽宁辖区
+    precinct_code: ZJJ006
+    list_page_base_url: http://www.csrc.gov.cn/searchList/be15ff0695cb4ba1a26130eea666037a
+    crawler_status_id: 75
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 辽宁辖区
+      blockLink: http://www.csrc.gov.cn/liaoning/c103733/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 吉林辖区
+    precinct_code: ZJJ007
+    list_page_base_url: http://www.csrc.gov.cn/searchList/0daee09d7ae0452f9d041d34f2ea7f65
+    crawler_status_id: 76
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 吉林辖区
+      blockLink: http://www.csrc.gov.cn/jilin/c103771/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 黑龙江辖区
+    precinct_code: ZJJ008
+    list_page_base_url: http://www.csrc.gov.cn/searchList/7727cd4c5443433283b31bc377597f63
+    crawler_status_id: 77
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 黑龙江辖区
+      blockLink: http://www.csrc.gov.cn/heilongjiang/c103809/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 上海辖区
+    precinct_code: ZJJ009
+    list_page_base_url: http://www.csrc.gov.cn/searchList/c0775a239c4245a8b03224a63fcec895
+    crawler_status_id: 78
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 上海辖区
+      blockLink: http://www.csrc.gov.cn/shanghai/c103847/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 江苏辖区
+    precinct_code: ZJJ010
+    list_page_base_url: http://www.csrc.gov.cn/searchList/dbf033a9ea494fbb923e9f095982bc3d
+    crawler_status_id: 79
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 江苏辖区
+      blockLink: http://www.csrc.gov.cn/jiangsu/c103885/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 浙江辖区
+    precinct_code: ZJJ011
+    list_page_base_url: http://www.csrc.gov.cn/searchList/ee7fb68c7e524fb1aa0efb16ae98e026
+    crawler_status_id: 80
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 浙江辖区
+      blockLink: http://www.csrc.gov.cn/zhejiang/c103923/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 安徽辖区
+    precinct_code: ZJJ012
+    list_page_base_url: http://www.csrc.gov.cn/searchList/a60e4ddbc1674de6ae36e0e8c2171356
+    crawler_status_id: 81
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 安徽辖区
+      blockLink: http://www.csrc.gov.cn/anhui/c103961/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 福建辖区
+    precinct_code: ZJJ013
+    list_page_base_url: http://www.csrc.gov.cn/searchList/d2bf8a4d5d004c1e9f624b0ec42cd2fb
+    crawler_status_id: 82
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 福建辖区
+      blockLink: http://www.csrc.gov.cn/fujian/c104037/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 江西辖区
+    precinct_code: ZJJ014
+    list_page_base_url: http://www.csrc.gov.cn/searchList/7d7e4d2715ff4e2393bad02210e6f280
+    crawler_status_id: 83
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 江西辖区
+      blockLink: http://www.csrc.gov.cn/jiangxi/c104151/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 山东辖区
+    precinct_code: ZJJ015
+    list_page_base_url: http://www.csrc.gov.cn/searchList/e1def15e7271410caa80d20540a88405
+    crawler_status_id: 84
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 山东辖区
+      blockLink: http://www.csrc.gov.cn/shandong/c104189/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 河南辖区
+    precinct_code: ZJJ016
+    list_page_base_url: http://www.csrc.gov.cn/searchList/219f8367d7de4111aa919a52578c1112
+    crawler_status_id: 85
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 河南辖区
+      blockLink: http://www.csrc.gov.cn/henan/c104265/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 湖北辖区
+    precinct_code: ZJJ017
+    list_page_base_url: http://www.csrc.gov.cn/searchList/40fc7ad1ef9d424582ae14a915da603c
+    crawler_status_id: 86
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 湖北辖区
+      blockLink: http://www.csrc.gov.cn/hubei/c104379/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 湖南辖区
+    precinct_code: ZJJ018
+    list_page_base_url: http://www.csrc.gov.cn/searchList/9266a288e4c14ddfaa2d0f204765e3c2
+    crawler_status_id: 87
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 湖南辖区
+      blockLink: http://www.csrc.gov.cn/hunan/c104455/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 广东辖区
+    precinct_code: ZJJ019
+    list_page_base_url: http://www.csrc.gov.cn/searchList/416344205e39424bbfb05bcda6dbb2d5
+    crawler_status_id: 88
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 广东辖区
+      blockLink: http://www.csrc.gov.cn/guangdong/c104531/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 广西辖区
+    precinct_code: ZJJ020
+    list_page_base_url: http://www.csrc.gov.cn/searchList/1eeb8a3c1ac44ff7ac1916f30f30c51c
+    crawler_status_id: 89
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 广西辖区
+      blockLink: http://www.csrc.gov.cn/guangxi/c104645/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 海南辖区
+    precinct_code: ZJJ021
+    list_page_base_url: http://www.csrc.gov.cn/searchList/aebcf169daa7478a9e667f9944a002b0
+    crawler_status_id: 90
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 海南辖区
+      blockLink: http://www.csrc.gov.cn/hainan/c104721/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 重庆辖区
+    precinct_code: ZJJ022
+    list_page_base_url: http://www.csrc.gov.cn/searchList/44a8e78a6b1944cc87863b145cbdab84
+    crawler_status_id: 91
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 重庆辖区
+      blockLink: http://www.csrc.gov.cn/chongqing/c104797/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 四川辖区
+    precinct_code: ZJJ023
+    list_page_base_url: http://www.csrc.gov.cn/searchList/cf58cbc1d6e04712a0a6996fc75e6d0f
+    crawler_status_id: 92
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 四川辖区
+      blockLink: http://www.csrc.gov.cn/sichuan/c104873/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 贵州辖区
+    precinct_code: ZJJ024
+    list_page_base_url: http://www.csrc.gov.cn/searchList/80ec62d8182e4d009f80b9a67d83a776
+    crawler_status_id: 93
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 贵州辖区
+      blockLink: http://www.csrc.gov.cn/guizhou/c104835/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 云南辖区
+    precinct_code: ZJJ025
+    list_page_base_url: http://www.csrc.gov.cn/searchList/12eeb6abe65c4215856e9465981551ce
+    crawler_status_id: 94
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 云南辖区
+      blockLink: http://www.csrc.gov.cn/yunnan/c104759/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 西藏辖区
+    precinct_code: ZJJ026
+    list_page_base_url: http://www.csrc.gov.cn/searchList/868ceac31d92459bb12660e6f3df3164
+    crawler_status_id: 95
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 西藏辖区
+      blockLink: http://www.csrc.gov.cn/tibet/c104683/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 陕西辖区
+    precinct_code: ZJJ027
+    list_page_base_url: http://www.csrc.gov.cn/searchList/05570f1f35fd46dfafd1cb01426351e7
+    crawler_status_id: 96
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 陕西辖区
+      blockLink: http://www.csrc.gov.cn/shaanxi/c104607/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 甘肃辖区
+    precinct_code: ZJJ028
+    list_page_base_url: http://www.csrc.gov.cn/searchList/33d0b91d5ce54c649addca892db4dc0f
+    crawler_status_id: 97
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 甘肃辖区
+      blockLink: http://www.csrc.gov.cn/gansu/c104569/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 青海辖区
+    precinct_code: ZJJ029
+    list_page_base_url: http://www.csrc.gov.cn/searchList/008e8d4dd0ed4ae0ada90addea700efc
+    crawler_status_id: 98
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 青海辖区
+      blockLink: http://www.csrc.gov.cn/qinghai/c104493/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 宁夏辖区
+    precinct_code: ZJJ030
+    list_page_base_url: http://www.csrc.gov.cn/searchList/f751298dd74a4bb6ac68bc86ce6b5e80
+    crawler_status_id: 99
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 宁夏辖区
+      blockLink: http://www.csrc.gov.cn/ningxia/c104417/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 新疆辖区
+    precinct_code: ZJJ031
+    list_page_base_url: http://www.csrc.gov.cn/searchList/230f3fc25bcc409eb35413d46c62cdf3
+    crawler_status_id: 100
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 新疆辖区
+      blockLink: http://www.csrc.gov.cn/xinjiang/c104341/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 深圳辖区
+    precinct_code: ZJJ032
+    list_page_base_url: http://www.csrc.gov.cn/searchList/2d0411f5898543a2aa70d38a5539c3dc
+    crawler_status_id: 101
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 深圳辖区
+      blockLink: http://www.csrc.gov.cn/shenzhen/c104303/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 大连辖区
+    precinct_code: ZJJ033
+    list_page_base_url: http://www.csrc.gov.cn/searchList/d3c74bedfbe3476788238e61c4659def
+    crawler_status_id: 102
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 大连辖区
+      blockLink: http://www.csrc.gov.cn/dalian/c104227/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 宁波辖区
+    precinct_code: ZJJ034
+    list_page_base_url: http://www.csrc.gov.cn/searchList/092648157a484042802f2a1eb33b3b61
+    crawler_status_id: 103
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 宁波辖区
+      blockLink: http://www.csrc.gov.cn/ningbo/c104113/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 厦门辖区
+    precinct_code: ZJJ035
+    list_page_base_url: http://www.csrc.gov.cn/searchList/fc06140f3fd44a7cb658031f33392630
+    crawler_status_id: 104
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 厦门辖区
+      blockLink: http://www.csrc.gov.cn/xiamen/c104075/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 青岛辖区
+    precinct_code: ZJJ036
+    list_page_base_url: http://www.csrc.gov.cn/searchList/91e150d77eda48539f5e187a8d6ceeb5
+    crawler_status_id: 105
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 青岛辖区
+      blockLink: http://www.csrc.gov.cn/qingdao/c103999/zfxxgk_zdgk.shtml?tab=zdgkml
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 上海专员办
+    precinct_code: ZJJ037
+    list_page_base_url: http://www.csrc.gov.cn/searchList/3fdeb6b6c586486b9c38aafa68cd2a93
+    crawler_status_id: 106
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 上海专员办
+      blockLink: http://www.csrc.gov.cn/shzyb/c101682/common_list.shtml?channelid=3fdeb6b6c586486b9c38aafa68cd2a93
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
+  - precinct: 深圳专员办
+    precinct_code: ZJJ038
+    list_page_base_url: http://www.csrc.gov.cn/searchList/059986f6f4834fe6ae61cb76bd9ef23b
+    crawler_status_id: 107
+    condition:
+      projectName: 证监局36辖区+2专员办
+      source: 中国证券监督管理委员会
+      blockName: 深圳专员办
+      blockLink: http://www.csrc.gov.cn/szzyb/c101700/common_list.shtml?channelid=059986f6f4834fe6ae61cb76bd9ef23b
+      dbHost: 139.159.150.159
+      dbName: pyspider_data
+      tableName: csrc_gov
