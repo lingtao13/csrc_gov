@@ -1,7 +1,7 @@
-# 文件名: conf/infrastructure.yml
+# 文件名: 
 # ---------------------
-# 描述: 1. 定义所有环境的基础设施连接凭证 (数据库、OBS等)
-#       2. (!!! 警告: 此文件必须被 .gitignore 忽略 !!!)
+# 描述: 
+#       2. (!!! 警告: 
 # ---------------------
 
 # ---------------------------------
@@ -10,47 +10,47 @@
 databases:
   # 生产环境数据主库 (来自原 db_server)
   prod_data_db:
-    db_host: 192.168.1.238
-    db_port: 3306
-    db_username: pyspider
-    db_password: py2018spider
-    db_database: pyspider_data
+    db_host: 
+    db_port: 
+    db_username: 
+    db_password: 
+    db_database: 
     ssh_host:
     ssh_username:
     ssh_password:
 
   # 生产环境监控库 (来自原 monitor_db_server)
   prod_monitor_db:
-    db_host: 192.168.1.238
-    db_port: 3306
-    db_username: pyspider
-    db_password: py2018spider
-    db_database: pyspider_data
+    db_host: 
+    db_port: 
+    db_username: 
+    db_password: 
+    db_database: 
     ssh_host:
     ssh_username:
     ssh_password:
 
   # 开发环境数据主库 (来自原 db_ssh_server)
   dev_data_db:
-    db_host: 127.0.0.1
-    db_port: 3306
-    db_username: root
-    db_password: BigData@2023
-    db_database: pyspider_data
-    ssh_host: 139.159.191.74
-    ssh_username: root
-    ssh_password: BigData@2023
+    db_host: 
+    db_port: 
+    db_username: 
+    db_password: 
+    db_database: 
+    ssh_host: 
+    ssh_username: 
+    ssh_password: 
 
   # 开发环境监控库 (来自原 monitor_db_ssh_server)
   dev_monitor_db:
-    db_host: 127.0.0.1
-    db_port: 3306
-    db_username: root
-    db_password: BigData@2023
-    db_database: pyspider_data
-    ssh_host: 139.159.191.74
-    ssh_username: root
-    ssh_password: BigData@2023
+    db_host: 
+    db_port: 
+    db_username: 
+    db_password: 
+    db_database: 
+    ssh_host: 
+    ssh_username: 
+    ssh_password: 
 
 # ---------------------------------
 # 2. OBS 存储池 (Object Storage)
@@ -58,16 +58,16 @@ databases:
 obs_storage:
   # 生产环境 OBS (来自原 detail/attachment_pro.yml)
   prod_obs:
-    ak: FMH0XV3F9VFQLTAFHRGL
-    sk: ARUbor7b03LBEjBVotieP4Y2m34KtXYLklvz86ZO
-    sv: obs.cn-south-1.myhuaweicloud.com
-    bt: obs-cninfo-011
-    fd: csrc_gov/
+    ak: 
+    sk: 
+    sv: 
+    bt: 
+    fd: 
 
   # 开发环境 OBS (来自原 detail/attachment_dev.yml)
   dev_obs:
-    ak: FMH0XV3F9VFQLTAFHRGL
-    sk: ARUbor7b03LBEjBVotieP4Y2m34KtXYLklvz86ZO
-    sv: obs.cn-south-1.myhuaweicloud.com
-    bt: obs-cninfo-test
-    fd: cwd_test/csrc_gov/
+    ak: 
+    sk: 
+    sv: 
+    bt: 
+    fd: 
