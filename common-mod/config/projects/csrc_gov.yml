@@ -1,0 +1,87 @@
+# 文件名: conf/projects/csrc_gov.yml
+# ---------------------
+# 描述: "证监局" (csrc_gov) 项目的专属业务配置。
+#       不包含任何密钥或环境开关。
+# ---------------------
+
+# --- 1. 项目共享设置 ---
+project_name: "csrc_gov"
+db_table: "csrc_gov"
+db_monitor_table: "crawler_status"
+website_base_url: "http://www.csrc.gov.cn/"
+manuscript_data_base_url: "http://www.csrc.gov.cn/getManuscriptData"
+
+
+# --- 2. 列表页 (list_stage) 阶段配置 ---
+list_stage:
+  log_path: "./log/csrc_gov_list/"
+  log_file_path: "log.log"
+  proxy_cache_path: "./cache/proxy_cache/csrc_gov_list.txt"
+  update_time_extent: 10          # (对应原 list_pro.yml)
+  get_proxy_retry_number: 3
+
+  # 业务核心配置: 辖区列表
+  precinct_list:
+    - precinct: 北京辖区
+      precinct_code: ZJJ001
+      list_page_base_url: http://www.csrc.gov.cn/searchList/64c5d2c9a3de4eaca355e9170188e06a
+      crawler_status_id: 70
+      condition:
+        projectName: 证监局36辖区+2专员办
+        source: 中国证券监督管理委员会
+        blockName: 北京辖区
+        blockLink: http://www.csrc.gov.cn/beijing/c103543/zfxxgk_zdgk.shtml?tab=zdgkml
+        dbHost: 139.159.150.159
+        dbName: pyspider_data
+        tableName: csrc_gov
+    - precinct: 天津辖区
+      precinct_code: ZJJ002
+      list_page_base_url: http://www.csrc.gov.cn/searchList/ba03511cbacb4f53affdd31cfe555246
+      crawler_status_id: 71
+      condition:
+        projectName: 证监局36辖区+2专员办
+        source: 中国证券监督管理委员会
+        blockName: 天津辖区
+        blockLink: http://www.csrc.gov.cn/tianjin/c103581/zfxxgk_zdgk.shtml?tab=zdgkml
+        dbHost: 139.159.150.159
+        dbName: pyspider_data
+        tableName: csrc_gov
+    # ...
+    # ... (此处省略其他 36 个辖区, 内容与原 csrc_gov_list_pro.yml 中完全一致)
+    # ...
+    - precinct: 深圳专员办
+      precinct_code: ZJJ038
+      list_page_base_url: http://www.csrc.gov.cn/searchList/059986f6f4834fe6ae61cb76bd9ef23b
+      crawler_status_id: 107
+      condition:
+        projectName: 证监局36辖区+2专员办
+        source: 中国证券监督管理委员会
+        blockName: 深圳专员办
+        blockLink: http://www.csrc.gov.cn/szzyb/c101700/common_list.shtml?channelid=059986f6f4834fe6ae61cb76bd9ef23b
+        dbHost: 139.159.150.159
+        dbName: pyspider_data
+        tableName: csrc_gov
+
+
+# --- 3. 详情页 (detail_stage) 阶段配置 ---
+detail_stage:
+  log_path: "./log/csrc_gov_detail/"
+  log_file_path: "log.log"
+  proxy_cache_path: "./cache/proxy_cache/csrc_gov_detail.txt"
+  update_time_extent: 10
+  get_proxy_retry_number: 2
+
+  # 业务核心配置: 模板文件
+  temp_path: ./temp/
+  temp_file_path:
+    h5: page.html
+    c3: style.css
+
+
+# --- 4. 附件 (attachment_stage) 阶段配置 ---
+attachment_stage:
+  log_path: "./log/csrc_gov_attachment/"
+  log_file_path: "log.log"
+  proxy_cache_path: "./cache/proxy_cache/csrc_gov_attachment.txt"
+  update_time_extent: 10
+  get_proxy_retry_number: 2

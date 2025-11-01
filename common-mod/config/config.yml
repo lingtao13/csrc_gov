@@ -1,0 +1,43 @@
+# 文件名: conf/config.yml
+# ---------------------
+# 描述: 1. 定义当前运行的环境
+#       2. 定义环境与基础设施的映射
+#       3. 定义环境特定的逻辑开关 (如: 是否全量)
+# ---------------------
+
+# 1. 当前运行的环境
+# 可选值: "pro" (生产环境) 或 "dev" (开发环境)
+environment: "pro"
+
+
+# 2. 环境配置映射
+environments:
+  # -----------------
+  # 生产环境配置
+  # -----------------
+  pro:
+    # "pro" 环境下，"data_db" 连接使用 "prod_data_db" (来自 infrastructure.yml)
+    connections:
+      data_db: "prod_data_db"
+      monitor_db: "prod_monitor_db"
+      storage: "prod_obs"
+
+    # "pro" 环境下的逻辑开关
+    env_settings:
+      list_is_full_crawled: 0    # 生产环境：非全量
+      is_use_proxy: 0
+
+  # -----------------
+  # 开发环境配置
+  # -----------------
+  dev:
+    # "dev" 环境下，"data_db" 连接使用 "dev_data_db"
+    connections:
+      data_db: "dev_data_db"
+      monitor_db: "dev_monitor_db"  # 开发时监控库和数据库可以是同一个
+      storage: "dev_obs"
+
+    # "dev" 环境下的逻辑开关
+    env_settings:
+      list_is_full_crawled: 1    # 开发环境：全量
+      is_use_proxy: 0
